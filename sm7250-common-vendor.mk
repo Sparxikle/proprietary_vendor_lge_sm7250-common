@@ -151,6 +151,8 @@ PRODUCT_PACKAGES += \
     vulkan.adreno \
     libC2D2 \
     libCB \
+    libOmxVdec \
+    libOmxVenc \
     libOmxVpp \
     libOpenCL \
     libVkLayer_q3dtools \
