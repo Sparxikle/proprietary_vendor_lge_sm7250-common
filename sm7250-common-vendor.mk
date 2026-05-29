@@ -561,11 +561,17 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.sensorscalibrate@1.0-service \
     vendor.qti.hardware.soter@1.0-service \
     vendor.qti.hardware.tui_comm@1.0-service-qti \
+    immvibed \
     ims_rtp_daemon \
     imsdatadaemon \
     imsqmidaemon \
     imsrcsd \
+    init.lge.usb.default \
+    init.lge.usb.diag \
+    init.lge.usb.lao \
+    init.lge.usb \
     init.qti.chg_policy \
+    ipd \
     ks \
     loc_launcher \
     lowi-server \

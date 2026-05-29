@@ -13324,6 +13324,30 @@ cc_prebuilt_binary {
 }
 
 cc_prebuilt_binary {
+    name: "immvibed",
+    owner: "lge",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/bin/immvibed",
+            ],
+            shared_libs: [
+                "liblog",
+                "libdl",
+                "libc",
+                "libm",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
     name: "ims_rtp_daemon",
     owner: "lge",
     target: {
@@ -13459,10 +13483,70 @@ cc_prebuilt_binary {
 }
 
 sh_binary {
+    name: "init.lge.usb.default",
+    owner: "lge",
+    src: "proprietary/vendor/bin/init.lge.usb.default.sh",
+    filename: "init.lge.usb.default.sh",
+    soc_specific: true,
+}
+
+sh_binary {
+    name: "init.lge.usb.diag",
+    owner: "lge",
+    src: "proprietary/vendor/bin/init.lge.usb.diag.sh",
+    filename: "init.lge.usb.diag.sh",
+    soc_specific: true,
+}
+
+sh_binary {
+    name: "init.lge.usb.lao",
+    owner: "lge",
+    src: "proprietary/vendor/bin/init.lge.usb.lao.sh",
+    filename: "init.lge.usb.lao.sh",
+    soc_specific: true,
+}
+
+sh_binary {
+    name: "init.lge.usb",
+    owner: "lge",
+    src: "proprietary/vendor/bin/init.lge.usb.sh",
+    filename: "init.lge.usb.sh",
+    soc_specific: true,
+}
+
+sh_binary {
     name: "init.qti.chg_policy",
     owner: "lge",
     src: "proprietary/vendor/bin/init.qti.chg_policy.sh",
     filename: "init.qti.chg_policy.sh",
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "ipd",
+    owner: "lge",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/bin/ipd",
+            ],
+            shared_libs: [
+                "libcutils",
+                "libutils",
+                "liblog",
+                "libQSEEComAPI",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
     soc_specific: true,
 }
 
